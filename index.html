@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semaforo</title>
+  <style>
+    body {
+      background-color: #7064a8;
+    }
+    .root {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #cinza1 {
+      width: 118px;
+      height: 117px;
+      background-color: rgba(204, 204, 204, 0.788);
+      border-radius: 60px;
+      position: absolute;   
+      margin-top: -122px;
+      display: block;
+    }
+    #cinza2 {
+      width: 118px;
+      height: 117px;
+      background-color: rgba(204, 204, 204, 0.788);
+      border-radius: 60px;
+      position: absolute;
+      margin-top: 22px; 
+    }
+    #cinza3 {
+      width: 118px;
+      height: 117px;
+      background-color: rgba(204, 204, 204, 0.788);
+      border-radius: 60px;
+      position: absolute;
+      margin-top: 165px; 
+    }
+    .btn {
+      width: 100px;
+      height: 30px;
+      border: none;
+      border-radius: 5px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      margin-top: 30px;
+      margin-left: 20px;
+    }
+    #vermelho {
+      margin-left: 330px;
+      background-color: red;
+    }
+    #amarelo {
+      background-color: yellow;
+    }
+    #verde {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="root">
+    <img src="semaforo.png" alt="semaforo"/>
+    <div id="cinza1" ></div>
+    <div id="cinza2" ></div>
+    <div id="cinza3" ></div>
+  </div>
+
+
+  <button class="btn" id="vermelho" onclick="mostraVermelho('cinza1')"></button>
+  <button class="btn" id="amarelo" onclick="mostraAmarelo('cinza2')"></button>
+  <button class="btn" id="verde" onclick="mostraVerde('cinza3')"></button>
+
+
+  <script>
+
+
+    function mostraVermelho(param) {
+      var display = document.getElementById(param).style.display;
+      if(display == 'block')
+        document.getElementById(param).style.display = 'none';
+      else
+        document.getElementById(param).style.display = 'block';
+    }
+
+
+    function mostraAmarelo(param) {
+      var display = document.getElementById(param).style.display;
+      if(display == 'block')
+        document.getElementById(param).style.display = 'none';
+      else
+        document.getElementById(param).style.display = 'block';
+    }
+
+
+    function mostraVerde(param) {
+      var display = document.getElementById(param).style.display;
+      if(display == 'block')
+        document.getElementById(param).style.display = 'none';
+      else
+        document.getElementById(param).style.display = 'block';
+    }
+
+    
+  </script>
+</body>
+</html>
